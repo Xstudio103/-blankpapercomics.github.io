@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blank Paper - Quantum Drawing Studio</title>
+    <link rel="stylesheet" href="quantum-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&family=Roboto+Mono:wght@400;700&family=Courier+Prime:wght@400;700&family=Caveat:wght@400;700&family=Fredoka:wght@400;700&family=Bebas+Neue&family=Pacifico&family=Righteous&family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <h1>Blank Paper</h1>
+                <p>QUANTUM</p>
+            </div>
+            <div class="project-name">
+                <input type="text" id="projectName" placeholder="Untitled Project" value="Untitled Project">
+            </div>
+            <div class="nav-buttons">
+                <button id="projectsBtn" class="nav-btn">📁 Projects</button>
+                <button id="saveBtn" class="nav-btn save-btn">💾 Save</button>
+                <button id="exportBtn" class="nav-btn export-btn">📥 Export PNG</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="studio-container">
+        <!-- Left Sidebar - Tools -->
+        <aside class="sidebar left-sidebar">
+            <div class="tool-section">
+                <h3>Tools</h3>
+                <div class="tool-grid">
+                    <button class="tool-btn active" data-tool="draw" title="Draw (Freehand)">✏️</button>
+                    <button class="tool-btn" data-tool="brush" title="Brush">🖌️</button>
+                    <button class="tool-btn" data-tool="crayon" title="Crayon">🖍️</button>
+                    <button class="tool-btn" data-tool="pencil" title="Pencil">✍️</button>
+                    <button class="tool-btn" data-tool="marker" title="Marker">🖊️</button>
+                    <button class="tool-btn" data-tool="highlighter" title="Highlighter">🟨</button>
+                    <button class="tool-btn" data-tool="airbrush" title="Airbrush">💨</button>
+                    <button class="tool-btn" data-tool="eraser" title="Eraser">🗑️</button>
+                </div>
+            </div>
+
+            <div class="tool-section">
+                <h3>Shapes</h3>
+                <div class="shape-grid">
+                    <button class="shape-btn" data-shape="line" title="Line">📏</button>
+                    <button class="shape-btn" data-shape="rectangle" title="Rectangle">▭</button>
+                    <button class="shape-btn" data-shape="circle" title="Circle">●</button>
+                    <button class="shape-btn" data-shape="triangle" title="Triangle">▲</button>
+                    <button class="shape-btn" data-shape="arrow" title="Arrow">→</button>
+                    <button class="shape-btn" data-shape="star" title="Star">⭐</button>
+                </div>
+            </div>
+
+            <div class="tool-section">
+                <h3>Text</h3>
+                <button class="tool-btn" data-tool="text" title="Add Text">T</button>
+                <div class="font-selector">
+                    <select id="fontFamily">
+                        <option value="Poppins">Poppins</option>
+                        <option value="Playfair Display">Playfair Display</option>
+                        <option value="Roboto Mono">Roboto Mono</option>
+                        <option value="Courier Prime">Courier Prime</option>
+                        <option value="Caveat">Caveat (Handwriting)</option>
+                        <option value="Fredoka">Fredoka</option>
+                        <option value="Bebas Neue">Bebas Neue</option>
+                        <option value="Pacifico">Pacifico</option>
+                        <option value="Righteous">Righteous</option>
+                        <option value="Abril Fatface">Abril Fatface</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Verdana">Verdana</option>
+                    </select>
+                </div>
+                <div class="font-size">
+                    <input type="range" id="fontSize" min="8" max="100" value="24">
+                    <span id="fontSizeValue">24</span>
+                </div>
+            </div>
+
+            <div class="tool-section">
+                <h3>Speech Bubbles</h3>
+                <div class="bubble-grid">
+                    <button class="bubble-btn" data-bubble="speech" title="Speech">💬</button>
+                    <button class="bubble-btn" data-bubble="thought" title="Thought">☁️</button>
+                    <button class="bubble-btn" data-bubble="shout" title="Shout">📢</button>
+                    <button class="bubble-btn" data-bubble="whisper" title="Whisper">🤫</button>
+                    <button class="bubble-btn" data-bubble="narration" title="Narration">📖</button>
+                    <button class="bubble-btn" data-bubble="scream" title="Scream">😱</button>
+                    <button class="bubble-btn" data-bubble="cloud" title="Cloud">☁️</button>
+                    <button class="bubble-btn" data-bubble="rectangle" title="Rectangle">▭</button>
+                    <button class="bubble-btn" data-bubble="rounded" title="Rounded">●</button>
+                </div>
+            </div>
+
+            <div class="tool-section">
+                <h3>Brush Settings</h3>
+                <div class="setting">
+                    <label>Size</label>
+                    <input type="range" id="brushSize" min="1" max="50" value="5">
+                    <span id="brushSizeValue">5</span>
+                </div>
+                <div class="setting">
+                    <label>Opacity</label>
+                    <input type="range" id="brushOpacity" min="0" max="100" value="100">
+                    <span id="brushOpacityValue">100%</span>
+                </div>
+            </div>
+
+            <div class="tool-section">
+                <h3>Textures</h3>
+                <select id="textureSelect">
+                    <option value="none">None</option>
+                    <option value="paper">Paper</option>
+                    <option value="canvas">Canvas</option>
+                    <option value="fabric">Fabric</option>
+                    <option value="wood">Wood Grain</option>
+                </select>
+            </div>
+
+            <div class="tool-section">
+                <h3>Colors</h3>
+                <div class="color-picker-row">
+                    <label>Stroke</label>
+                    <input type="color" id="strokeColor" value="#ff6b35">
+                </div>
+                <div class="color-picker-row">
+                    <label>Fill</label>
+                    <input type="color" id="fillColor" value="#ffffff">
+                </div>
+            </div>
+
+            <div class="tool-section actions">
+                <button id="undoBtn" class="action-btn">↶ Undo</button>
+                <button id="redoBtn" class="action-btn">↷ Redo</button>
+                <button id="blendBtn" class="action-btn blend-btn">🎨 Blend Mode</button>
+                <button id="clearBtn" class="action-btn delete-btn">🗑️ Clear</button>
+            </div>
+        </aside>
+
+        <!-- Canvas Area -->
+        <div class="canvas-wrapper">
+            <canvas id="canvas"></canvas>
+            <div id="textInput" class="text-input hidden">
+                <textarea id="textContent" placeholder="Type text..."></textarea>
+            </div>
+        </div>
+
+        <!-- Right Sidebar - Layers -->
+        <aside class="sidebar right-sidebar">
+            <div class="layers-panel">
+                <h3>Layers</h3>
+                <div id="layersList" class="layers-list"></div>
+                <button id="addLayerBtn" class="layer-btn">+ New Layer</button>
+            </div>
+        </aside>
+    </div>
+
+    <script src="quantum-script.js"></script>
+</body>
+</html>
