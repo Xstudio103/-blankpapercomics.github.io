@@ -79,14 +79,46 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
-            <h2>Blank Paper<br><span class="highlight">Comics.</span></h2>
-            <p>Discover indie comics from independent creators.<br>Read, react, and follow your favorites.</p>
-            <div class="search-box">
-                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"/>
-                    <path d="m21 21-4.35-4.35"/>
-                </svg>
-                <input type="text" placeholder="Search creators...">
+            <div class="hero-content">
+                <h2 class="hero-title">Blank Paper<span class="hero-break"></span><span class="highlight">Comics</span></h2>
+                <p class="hero-subtitle">Where indie creators bring stories to life</p>
+                <p class="hero-description">Discover stunning comics from independent artists. Read, react, and follow your favorites.</p>
+                <div class="search-box">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                    <input type="text" placeholder="Search creators...">
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-comic floating-1"></div>
+                <div class="floating-comic floating-2"></div>
+                <div class="floating-comic floating-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured-section">
+        <div class="container">
+            <h2>Trending Now</h2>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="card-image featured-1"></div>
+                    <h3>Epic Adventures</h3>
+                    <p>Follow heroes on their greatest journeys</p>
+                </div>
+                <div class="featured-card">
+                    <div class="card-image featured-2"></div>
+                    <h3>Slice of Life</h3>
+                    <p>Heartwarming stories from everyday creators</p>
+                </div>
+                <div class="featured-card">
+                    <div class="card-image featured-3"></div>
+                    <h3>Fantasy Realms</h3>
+                    <p>Immerse yourself in magical worlds</p>
+                </div>
             </div>
         </div>
     </section>
@@ -94,19 +126,49 @@
     <!-- Comics Gallery Section -->
     <section id="gallery" class="gallery">
         <div class="container">
-            <h2>Featured Comics</h2>
+            <h2>Latest Comics</h2>
             <div class="comics-grid">
                 <div class="comic-card">
-                    <img src="https://via.placeholder.com/300x400?text=Comic+1" alt="Comic 1">
+                    <div class="comic-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <div class="comic-info">
+                        <h4>Comic Title</h4>
+                        <p class="creator">by Creator</p>
+                    </div>
                 </div>
                 <div class="comic-card">
-                    <img src="https://via.placeholder.com/300x400?text=Comic+2" alt="Comic 2">
+                    <div class="comic-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    <div class="comic-info">
+                        <h4>Comic Title</h4>
+                        <p class="creator">by Creator</p>
+                    </div>
                 </div>
                 <div class="comic-card">
-                    <img src="https://via.placeholder.com/300x400?text=Comic+3" alt="Comic 3">
+                    <div class="comic-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                    <div class="comic-info">
+                        <h4>Comic Title</h4>
+                        <p class="creator">by Creator</p>
+                    </div>
                 </div>
                 <div class="comic-card">
-                    <img src="https://via.placeholder.com/300x400?text=Comic+4" alt="Comic 4">
+                    <div class="comic-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+                    <div class="comic-info">
+                        <h4>Comic Title</h4>
+                        <p class="creator">by Creator</p>
+                    </div>
+                </div>
+                <div class="comic-card">
+                    <div class="comic-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                    <div class="comic-info">
+                        <h4>Comic Title</h4>
+                        <p class="creator">by Creator</p>
+                    </div>
+                </div>
+                <div class="comic-card">
+                    <div class="comic-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
+                    <div class="comic-info">
+                        <h4>Comic Title</h4>
+                        <p class="creator">by Creator</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -115,61 +177,77 @@
     <!-- Features Section -->
     <section id="features" class="features">
         <div class="container">
-            <h2>Why Choose Blank Paper Comics?</h2>
+            <h2>Why Blank Paper?</h2>
             <div class="feature-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-                        </svg>
-                    </div>
-                    <h3>Quantum</h3>
-                    <p>Professional comics creator with all the tools you need.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="1"/>
-                            <path d="M12 8v-4M12 16v4M8 12h-4M16 12h4M9.17 6.83l-2.83-2.83M15.66 15.66l2.83 2.83M6.83 14.83l-2.83 2.83M15.66 8.34l2.83-2.83"/>
-                        </svg>
-                    </div>
-                    <h3>Studios</h3>
-                    <p>Collaborate and share with the creator community.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
                             <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                     </div>
-                    <h3>No Limits</h3>
-                    <p>Create freely. No paywalls. No restrictions.</p>
+                    <h3>Unlimited Freedom</h3>
+                    <p>Create without limits. No paywalls, no restrictions on your imagination.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <circle cx="12" cy="12" r="1"/>
+                            <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m2.12 2.12l4.24 4.24M1 12h6m6 0h6m-15.78 7.78l4.24-4.24m2.12-2.12l4.24-4.24"/>
+                        </svg>
+                    </div>
+                    <h3>Community Driven</h3>
+                    <p>Connect with fellow creators and readers. Share feedback and grow together.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>Professional Tools</h3>
+                    <p>Use Quantum to create, edit, and publish your best work with ease.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Quantum Section -->
-    <section id="quantum" class="section">
+    <!-- CTA Section -->
+    <section class="cta-section">
         <div class="container">
-            <h2>Quantum Comics Creator</h2>
-            <p>Draw, design, and create beautiful comics with professional tools.</p>
-            <button class="btn btn-primary">Launch Quantum</button>
-        </div>
-    </section>
-
-    <!-- Studios Section -->
-    <section id="studios" class="section">
-        <div class="container">
-            <h2>Studios Community</h2>
-            <p>Connect with other comic creators. Share feedback. Grow together.</p>
+            <h2>Ready to Create?</h2>
+            <p>Join thousands of indie creators sharing their stories</p>
+            <button class="btn btn-cta">Start Creating Now</button>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Blank Paper Comics. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Blank Paper Comics</h4>
+                    <p>Empowering indie creators worldwide</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#quantum">Quantum Creator</a></li>
+                        <li><a href="#studios">Studios</a></li>
+                        <li><a href="#gallery">Browse Comics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Tutorial</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Blank Paper Comics. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
