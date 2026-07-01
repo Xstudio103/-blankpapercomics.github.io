@@ -20,8 +20,8 @@ body {
 
 /* Navigation Bar */
 .navbar {
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #e0e0e0;
+    background-color: #000;
+    color: #fff;
     padding: 0.6rem 0;
     position: sticky;
     top: 0;
@@ -38,39 +38,11 @@ body {
     gap: 1rem;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    flex-shrink: 0;
-}
-
-.logo-icon {
-    width: 32px;
-    height: 32px;
-    background: radial-gradient(circle, #d4a574 0%, #8b7355 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.logo-icon::before {
-    content: '';
-    width: 16px;
-    height: 20px;
-    background-color: #f5e6d3;
-    border: 1.5px solid #8b7355;
-    border-radius: 2px;
-}
-
 .logo-text h1 {
     font-size: 0.9rem;
     font-weight: bold;
     line-height: 1;
-    color: #000;
+    color: #fff;
 }
 
 .logo-text p {
@@ -81,7 +53,7 @@ body {
 }
 
 .btn-post {
-    background-color: #ff6b35;
+    background-color: #000;
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;
@@ -95,7 +67,7 @@ body {
 }
 
 .btn-post:hover {
-    background-color: #e55a24;
+    background-color: #333;
 }
 
 .nav-links {
@@ -110,12 +82,13 @@ body {
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    color: #333;
+    color: #fff;
     text-decoration: none;
     font-size: 0.85rem;
     transition: color 0.3s;
     padding: 0.4rem 0.6rem;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .nav-item:hover {
@@ -137,6 +110,78 @@ body {
 .logout-icon .nav-icon {
     width: 16px;
     height: 16px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close {
+    color: #999;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.modal-content h2 {
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.modal-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.modal-content input:focus {
+    outline: none;
+    border-color: #ff6b35;
+}
+
+.signup-link {
+    margin-top: 1rem;
+    color: #666;
+}
+
+.signup-link a {
+    color: #ff6b35;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
 }
 
 /* Hero Section */
